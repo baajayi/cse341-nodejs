@@ -8,3 +8,49 @@ GET http://localhost:8080/contacts/63b8c0bc518c0460dfb3d5b2
 ###
 
 GET http://localhost:8080/contacts/63b8c0bc518c0460dfb3d5b3
+###
+
+
+GET https://contact-api-zapa.onrender.com/contacts
+###
+
+GET https://contact-api-zapa.onrender.com/contacts/63b8c0bc518c0460dfb3d5b1
+###
+
+GET https://contact-api-zapa.onrender.com/contacts/63b8c0bc518c0460dfb3d5b2
+###
+
+GET https://contact-api-zapa.onrender.com/contacts/63b8c0bc518c0460dfb3d5b3
+###
+
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Omoyele",
+    "lastName":"Sowore",
+    "email":"yeleSowore@saharareporters.org",
+    "favoriteColor":"Biro Blue",
+    "birthday":"02-11-1965"
+}
+
+###
+
+DELETE http://localhost:8080/contacts/63bd7b8c075f347eabd0da95 HTTP/1.1
+###
+
+
+PUT  http://localhost:8080/contacts/63bd91b1b6e073ac1f32fb59 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Mikel",
+    "lastName":"Obi",
+    "email":"peterobi@laborparty.org",
+    "favoriteColor":"Teal",
+    "birthday":"02-01-1963"
+}
+
+
+
+

@@ -6,14 +6,15 @@ const routes = require('./routes');
 const port = process.env.PORT || 8080;
 const app = express();
 
-app.use(bodyParser.json());
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    next();
-});
-app.use('/', routes);
+app.use(bodyParser.json())
+    .use(express.json())
+    .use((req, res, next) => {
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      next();
+})
+.use('/', routes);
 
-mongodb.initDb((err, mongodb) => {
+mongodb.initDb((err) => {
     if (err) {
         console.log(err);
     } else {
