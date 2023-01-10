@@ -44,13 +44,38 @@ PUT  http://localhost:8080/contacts/63bd91b1b6e073ac1f32fb59 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Mikel",
+    "firstName":"Peter",
     "lastName":"Obi",
     "email":"peterobi@laborparty.org",
     "favoriteColor":"Teal",
     "birthday":"02-01-1963"
 }
+###
 
+POST https://rest-api-ei73.onrender.com/contacts HTTP/1.1
+content-type: application/json
 
+{
+     "firstName":"Omoyele",
+    "lastName":"Sowore",
+    "email":"yeleSowore@saharareporters.org",
+    "favoriteColor":"Biro Blue",
+    "birthday":"02-11-1965"
+}
+###
+DELETE https://rest-api-ei73.onrender.com/contacts/63bdada01820728447eb3b02 HTTP/1.1
+
+###
+
+PUT https://rest-api-ei73.onrender.com/contacts/63bd91b1b6e073ac1f32fb59 HTTP/1.1
+content-type: application/json
+
+{
+     "firstName":"Mikel",
+    "lastName":"Obi",
+    "email":"peterobi@laborparty.org",
+    "favoriteColor":"Teal",
+    "birthday":"02-01-1963" 
+}
 
 
