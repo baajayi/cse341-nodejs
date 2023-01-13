@@ -36,7 +36,7 @@ content-type: application/json
 
 ###
 
-DELETE http://localhost:8080/contacts/63bd7b8c075f347eabd0da95 HTTP/1.1
+DELETE http://localhost:8080/contacts/63bdd9135ef472b5f086f81e HTTP/1.1
 ###
 
 
@@ -63,7 +63,7 @@ content-type: application/json
     "birthday":"02-11-1965"
 }
 ###
-DELETE https://rest-api-ei73.onrender.com/contacts/63bdada01820728447eb3b02 HTTP/1.1
+DELETE https://rest-api-ei73.onrender.com/contacts/63bdd9bc95483ab9bc0f9ae2 HTTP/1.1
 
 ###
 

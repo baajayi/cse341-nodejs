@@ -9,7 +9,8 @@
     "dev": "nodemon server.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "swagger": "node ./swagger.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,11 @@
     "express": "^4.18.2",
     "faker": "^5.5.3",
     "mongodb": "^4.13.0",
-    "objectmodel": "^4.4.1"
+    "mongoose": "^6.8.3",
+    "objectmodel": "^4.4.1",
+    "swagger": "^0.0.1",
+    "swagger-autogen": "^2.22.0",
+    "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
     "eslint": "^8.31.0",
