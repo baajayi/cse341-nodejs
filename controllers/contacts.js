@@ -59,7 +59,7 @@ const editContact = async (req, res, next) => {
     birthday: req.body.birthday
   }
   const userId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db('cse341').collection('contacts').updateOne({ _id: userId }, {$set: { firstName: req.body.firstName}});
+  const result = await mongodb.getDb().db('cse341').collection('contacts').replaceOne({ _id: userId }, Contact);
   res.status(204).json(result);
 } catch(err) {
   res.status(500).json(err || `Error While updating contact with Id ${userId}`)
