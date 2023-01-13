@@ -31,7 +31,6 @@
     "mongodb": "^4.13.0",
     "mongoose": "^6.8.3",
     "objectmodel": "^4.4.1",
-    "swagger": "^0.0.1",
     "swagger-autogen": "^2.22.0",
     "swagger-ui-express": "^4.6.0"
   },
