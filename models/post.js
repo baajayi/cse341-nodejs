@@ -6,5 +6,5 @@ function human(firstName, lastName, email, favoriteColor, birthday) {
     this.email = email,
     this.favoriteColor = favoriteColor,
     this.birthday = birthday
-};
+}
 module.exports = { human };

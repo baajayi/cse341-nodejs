@@ -5,7 +5,7 @@
     "description": "Contacta",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://contact-swagger.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
