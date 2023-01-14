@@ -6,7 +6,7 @@ const doc = {
     description: 'Contacts',
   },
   host: 'contact-swagger.onrender.com',
-  schemes: ['http'],
+  schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
