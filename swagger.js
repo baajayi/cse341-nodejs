@@ -5,7 +5,7 @@ const doc = {
     title: 'My API',
     description: 'Contacta',
   },
-  host: 'localhost:8080',
+  host: 'https://contact-swagger.onrender.com',
   schemes: ['http'],
 };
 
