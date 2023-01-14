@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Contacta",
+    "description": "Contacts",
     "version": "1.0.0"
   },
-  "host": "https://contact-swagger.onrender.com",
+  "host": "contact-swagger.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
