@@ -1,0 +1,13 @@
+[
+    {
+        "commonName":"Bitter Leaf",
+        "localName": "Onugbu",
+        "family": "Asteracae",
+        "genus": "Vernonia",
+        "isMedicinal": "True",
+        "flowerColor": "White",
+        "isEdible": "True",
+        "scientificName":"Vernonia amygdalina"
+
+    }
+]
