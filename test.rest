@@ -1,22 +1,22 @@
-GET http://localhost:8080/plant/63c6bc797db8505332e7e106
+GET http://localhost:8080/plant/63c869e7af41263b6fb196fe
 ###
 
-POST http://localhost:8080/contacts HTTP/1.1
+POST http://localhost:8080/plant HTTP/1.1
 content-type: application/json
 
 {
-"commonName":"Moringa", 
-"localName":"Imoringa",
-"family":"Moringaceae", 
-"genus":"Moringa", 
-"isMedicinal":"True",
-"flowerColor":"White",
-"isEdible":"True",
-"scientificName":"Moringa olifera"
+    "commonName":"Moringa", 
+    "localName":"Imoringa",
+    "family":"Moringaceae", 
+    "genus":"Moringa", 
+    "isMedicinal":"True",
+    "flowerColor":"White",
+    "isEdible":"True",
+    "scientificName":"Moringa olifera"
 }
 ###
 
-POST http://localhost:8080/contacts HTTP/1.1
+POST http://localhost:8080/plant HTTP/1.1
 content-type: application/json
 
 {
@@ -31,11 +31,5 @@ content-type: application/json
 }
 ###
 
-DELETE http://localhost:8080/contacts HTTP/1.1
-content-type: application/json
-
-{
-    "commonName": "Bitter Leaf",
-    }
-
-    GET http://localhost:8080/contacts/
+GET https://plant-api.onrender.com/plant
+###
