@@ -1,85 +1,41 @@
-GET http://localhost:8080/contacts
-###
-
-GET http://localhost:8080/contacts/63b8c0bc518c0460dfb3d5b1
-###
-
-GET http://localhost:8080/contacts/63b8c0bc518c0460dfb3d5b2
-###
-
-GET http://localhost:8080/contacts/63b8c0bc518c0460dfb3d5b3
-###
-
-
-GET https://contact-api-zapa.onrender.com/contacts
-###
-
-GET https://contact-api-zapa.onrender.com/contacts/63b8c0bc518c0460dfb3d5b1
-###
-
-GET https://contact-api-zapa.onrender.com/contacts/63b8c0bc518c0460dfb3d5b2
-###
-
-GET https://contact-api-zapa.onrender.com/contacts/63b8c0bc518c0460dfb3d5b3
+GET http://localhost:8080/plant/63c6bc797db8505332e7e106
 ###
 
 POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Omoyele",
-    "lastName":"Sowore",
-    "email":"yeleSowore@saharareporters.org",
-    "favoriteColor":"Biro Blue",
-    "birthday":"02-11-1965"
+"commonName":"Moringa", 
+"localName":"Imoringa",
+"family":"Moringaceae", 
+"genus":"Moringa", 
+"isMedicinal":"True",
+"flowerColor":"White",
+"isEdible":"True",
+"scientificName":"Moringa olifera"
 }
-
 ###
 
-DELETE http://localhost:8080/contacts/63bdd9135ef472b5f086f81e HTTP/1.1
-###
-
-
-PUT  http://localhost:8080/contacts/63bd91b1b6e073ac1f32fb59 HTTP/1.1
+POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Peter",
-    "lastName":"Obi",
-    "email":"peterobi@laborparty.org",
-    "favoriteColor":"Teal",
-    "birthday":"02-01-1963"
+"commonName":"Amaranth", 
+"localName":"Efo green",
+"family":"Amaranthaceae", 
+"genus":"Amaranthus", 
+"isMedicinal":"False",
+"flowerColor":"Red",
+"isEdible":"True",
+"scientificName":"Amarathus tricolor"
 }
 ###
 
-POST https://rest-api-ei73.onrender.com/contacts HTTP/1.1
+DELETE http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
 {
-     "firstName":"Omoyele",
-    "lastName":"Sowore",
-    "email":"yeleSowore@saharareporters.org",
-    "favoriteColor":"Biro Blue",
-    "birthday":"02-11-1965"
-}
-###
-DELETE https://rest-api-ei73.onrender.com/contacts/63bdd9bc95483ab9bc0f9ae2 HTTP/1.1
+    "commonName": "Bitter Leaf",
+    }
 
-###
-
-PUT https://rest-api-ei73.onrender.com/contacts/63bd91b1b6e073ac1f32fb59 HTTP/1.1
-content-type: application/json
-
-{
-     "firstName":"Mikel",
-    "lastName":"Obi",
-    "email":"peterobi@laborparty.org",
-    "favoriteColor":"Teal",
-    "birthday":"02-01-1963" 
-}
-
-
-###
-
-GET http://localhost:8080/api-docs
-###
+    GET http://localhost:8080/contacts/

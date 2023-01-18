@@ -2,19 +2,19 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
-    description: 'Contacts',
+    title: 'Plant API',
+    description: 'Some African Plants',
   },
-  host: 'contact-swagger.onrender.com',
-  schemes: ['https'],
+  host: 'localhost:8080',
+  schemes: ['http'],
 };
 
-const outputFile = './swagger.json';
+const outputFile = './swaggerdoc.json';
 const endpointsFiles = ['./routes/index.js'];
 
-// generate swagger.json
-// swaggerAutogen(outputFile, endpointsFiles, doc);
+// generate swaggerdoc.json
+swaggerAutogen(outputFile, endpointsFiles, doc);
 
-swaggerAutogen(outputFile, endpointsFiles, doc).then(async () => {
-  await import('./server.js');
-});
+// swaggerAutogen(outputFile, endpointsFiles, doc).then(async () => {
+//   await import('./server.js');
+// });
