@@ -12,7 +12,8 @@ const getData = async (req, res, next) => {
 const getPlant = async (req, res) => {
   try {
   if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json('Unabe to find a plant with that Id.');
+    res.status(400).json('Unable to find a plant with that Id.');
+    return;
   }
   const userId = new ObjectId(req.params.id);
   const result = await mongodb

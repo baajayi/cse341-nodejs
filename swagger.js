@@ -5,8 +5,8 @@ const doc = {
     title: 'Plant API',
     description: 'Some African Plants',
   },
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: 'plant-api2.onrender.com',
+  schemes: ['https'],
 };
 
 const outputFile = './swaggerdoc.json';

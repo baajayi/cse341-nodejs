@@ -5,10 +5,10 @@
     "description": "Some African Plants",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "plant-api2.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/": {
