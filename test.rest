@@ -51,5 +51,39 @@ DELETE http://localhost:8080/plant/63caf525e56efb9774886f1
 
 
 ###
-GET https://plant-api.onrender.com/plant/63cac60b1148deb27fc412dc
+GET https://plant-api2.onrender.com/plant
 ###
+
+GET https://plant-api2.onrender.com/plant/63caf432e56efb9774886f13
+###
+
+POST https://plant-api2.onrender.com/plant HTTP/1.1
+content-type: application/json
+
+{
+"commonName":"Amaranth", 
+"localName":"Efo green",
+"family":"Amaranthaceae", 
+"genus":"Amaranthus", 
+"isMedicinal":"False",
+"flowerColor":"Red",
+"isEdible":"True",
+"scientificName":"Amaranthus tricolor"
+}
+###
+
+PUT https://plant-api2.onrender.com/plant/63caf432e56efb9774886f13 HTTP/1.1
+content-type: application/json
+
+{"commonName": "Amaranth",
+    "localName": "Efo green",
+    "family": "Amaranthaceae",
+    "genus": "Amaranthus",
+    "isMedicinal": "False",
+    "flowerColor": "Red",
+    "isEdible": "True",
+    "scientificName": "Amarathus tricolor"
+}
+###
+
+DELETE https://plant-api2.onrender.com/plant/63caf432e56efb9774886f13
