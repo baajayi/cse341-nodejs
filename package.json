@@ -33,7 +33,9 @@
     "mongoose": "^6.8.3",
     "objectmodel": "^4.4.1",
     "swagger-autogen": "^2.22.0",
-    "swagger-ui-express": "^4.6.0"
+    "swagger-ui-express": "^4.6.0",
+    "validatejs": "^0.0.2",
+    "validatorjs": "^3.22.1"
   },
   "devDependencies": {
     "eslint": "^8.31.0",

@@ -1,4 +1,4 @@
-GET http://localhost:8080/plant/63c869e7af41263b6fb196fe
+GET http://localhost:8080/plant
 ###
 
 POST http://localhost:8080/plant HTTP/1.1
@@ -31,5 +31,25 @@ content-type: application/json
 }
 ###
 
-GET https://plant-api.onrender.com/plant
+PUT http://localhost:8080/plant/63caf432e56efb9774886f13 HTTP/1.1
+content-type: application/json
+
+{
+"commonName":"Amaranth", 
+"localName":"Efo green",
+"family":"Amaranthaceae", 
+"genus":"Amaranthus", 
+"isMedicinal":"False",
+"flowerColor":"Red",
+"isEdible":"True",
+"scientificName":"Amaranthus tricolor"
+}
+###
+
+
+DELETE http://localhost:8080/plant/63caf525e56efb9774886f1
+
+
+###
+GET https://plant-api.onrender.com/plant/63cac60b1148deb27fc412dc
 ###
