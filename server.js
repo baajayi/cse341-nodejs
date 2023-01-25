@@ -3,10 +3,22 @@ const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const routes = require('./routes');
 const cors = require('cors');
-
+const { auth } = require('express-openid-connect');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const port = process.env.PORT || 8080;
 const app = express();
+
+const config = {
+    authRequired: false,
+    auth0Logout: true,
+    secret: process.env.SECRET,
+    baseURL: process.env.BASE_URL,
+    clientID: process.env.CLIENT_ID,
+    issuerBaseURL: process.env.ISSUER_BASE_URL
+  };
+
 
 app.use(bodyParser.json())
 .use(cors())
@@ -17,7 +29,12 @@ app.use(bodyParser.json())
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
       next();
 })
+.use(auth(config))
 .use('/', routes);
+
+app.get('/', (req, res) => {
+    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+  });
 
 mongodb.initDb((err) => {
     if (err) {
