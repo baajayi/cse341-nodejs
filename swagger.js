@@ -5,7 +5,7 @@ const doc = {
     title: 'Plant API',
     description: 'Some African Plants',
   },
-  host: 'plant-api2.onrender.com',
+  host: 'plant-auth-api.onrender.com',
   schemes: ['https'],
 };
 
