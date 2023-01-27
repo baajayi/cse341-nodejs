@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "63cac6151148deb27fc412dd"
+  },
+  "commonName": "Moringa",
+  "localName": "Imoringa",
+  "family": "Moringaceae",
+  "genus": "Moringa",
+  "isMedicinal": "True",
+  "flowerColor": "White",
+  "isEdible": "True",
+  "scientificName": "Moringa olifera"
+},{
+  "_id": {
+    "$oid": "63cae4dafb62bbb7413ad7d0"
+  },
+  "commonName": "Moringa",
+  "localName": "Imoringa",
+  "family": "Moringaceae",
+  "genus": "Moringa",
+  "isMedicinal": "True",
+  "flowerColor": "White",
+  "isEdible": "True",
+  "scientificName": "Moringa olifera"
+},{
+  "_id": {
+    "$oid": "63caf432e56efb9774886f13"
+  },
+  "commonName": "Amaranth",
+  "localName": "Efo green",
+  "family": "Amaranthaceae",
+  "genus": "Amaranthus",
+  "isMedicinal": "False",
+  "flowerColor": "Red",
+  "isEdible": "True",
+  "scientificName": "Amarathus tricolor"
+},{
+  "_id": {
+    "$oid": "63cb097b00d0eedf9c02652b"
+  },
+  "commonName": "Bitter Leaf",
+  "localName": "Onugbu",
+  "family": "Asteracae",
+  "genus": "Vernonia",
+  "isMedicinal": "True",
+  "flowerColor": "White",
+  "isEdible": "True",
+  "scientificName": "Vernonia amygdalina"
+},{
+  "_id": {
+    "$oid": "63cb0b1d00d0eedf9c02652c"
+  },
+  "commonName": "Bitter Leaf",
+  "localName": "Onugbu",
+  "family": "Asteracae",
+  "genus": "Vernonia",
+  "isMedicinal": "True",
+  "flowerColor": "White",
+  "isEdible": "True",
+  "scientificName": "Vernonia amygdalina"
+},{
+  "_id": {
+    "$oid": "63cb0d7400d0eedf9c02652d"
+  },
+  "commonName": "Bitter Leaf",
+  "localName": "Onugbu",
+  "family": "Asteracae",
+  "genus": "Vernonia",
+  "isMedicinal": "True",
+  "flowerColor": "White",
+  "isEdible": "True",
+  "scientificName": "Vernonia amygdalina"
+},{
+  "_id": {
+    "$oid": "63cb0e2d00d0eedf9c02652e"
+  },
+  "commonName": "Bitter Leaf",
+  "localName": "Onugbu",
+  "family": "Asteracae",
+  "genus": "Vernonia",
+  "isMedicinal": "True",
+  "flowerColor": "White",
+  "isEdible": "True",
+  "scientificName": "Vernonia amygdalina"
+}]

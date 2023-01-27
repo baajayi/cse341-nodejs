@@ -1,5 +1,8 @@
+const { request } = require('express');
 const mongodb = require('../db/connect');
 const  ObjectId = require('mongodb').ObjectId;
+const model = require('../models');
+const Plant = model.Plant;
 
 const getData = async (req, res, next) => {
   const result = await mongodb.getDb().db('cse341-project2').collection('plant-collection').find();
@@ -34,16 +37,13 @@ const getPlant = async (req, res) => {
 
 const addPlant = async (req, res) => {
   try {
-  const Plant = {
-    commonName: req.body.commonName,
-      localName: req.body.localName,
-      family: req.body.family,
-      genus: req.body.genus,
-      isMedicinal: req.body.isMedicinal,
-      flowerColor: req.body.flowerColor,
-      isEdible: req.body.isEdible,
-      scientificName: req.body.scientificName
-  }
+  const plant = new Plant(req.body);
+    plant
+    .save()
+    .then((data) => {
+      console.log(data);
+      res.status(201).send(data);
+    });
   
   const result = await mongodb.getDb().db('cse341-project2').collection('plant-collection').insertOne(Plant);
   res.status(201).json(result)
@@ -94,4 +94,27 @@ const modifyPlant = async (req, res) => {
 }
 }
 
-module.exports = { getData, getPlant, addPlant, modifyPlant, remPlant };
+const getImage = async (req, res) => {
+  try {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Unable to find a plant with that Id.');
+    return;
+  }
+  const plantImage = new ObjectId(req.params.base64Image);
+  const result = await mongodb
+    .getDb()
+    .db('cse341-project2')
+    .collection('image')
+    .find({ plantImage: plantImage })
+      ;
+  result.toArray().then((lists) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(lists[0]);
+  });
+}catch(err){
+    res.status(500).json(result.error || 'Some error occurred while adding the plant.');
+    return;
+  }
+};
+
+module.exports = { getData, getPlant, addPlant, modifyPlant, remPlant, getImage };
