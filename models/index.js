@@ -6,7 +6,7 @@ mongoose.Promise = global.Promise;
 
 const db = {};
 db.mongoose = mongoose;
-db.url = process.env.MONGO_URI
+db.url = process.env.MONGODB_URI
 db.image = require('./image.js')(mongoose);
 db.plantcollection = require('./plant.js')(mongoose);
 

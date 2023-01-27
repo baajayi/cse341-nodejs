@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongodb = require('./db/connect');
+const mongoose = require('mongoose')
 const routes = require('./routes');
 const cors = require('cors');
 const { auth } = require('express-openid-connect');
@@ -36,11 +36,18 @@ app.get('/', (req, res) => {
     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
   });
 
-mongodb.initDb((err) => {
-    if (err) {
-        console.log(err);
-    } else {
-        app.listen(port);
-        console.log(`Connected to DB and listening on ${port}`);
-    }
-});
+  const db = require('./models');
+  db.mongoose
+    .connect(db.url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    })
+    .then(() => {
+      app.listen(port, () => {
+        console.log(`DB Connected and server running on ${port}.`);
+      });
+    })
+    .catch((err) => {
+      console.log('Cannot connect to the database!', err);
+      process.exit();
+    });
