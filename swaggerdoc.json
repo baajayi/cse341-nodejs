@@ -5,7 +5,7 @@
     "description": "Some African Plants",
     "version": "1.0.0"
   },
-  "host": "plant-auth-api.onrender.com",
+  "host": "https://plant-image.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
