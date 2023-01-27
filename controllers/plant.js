@@ -7,11 +7,6 @@ const getData = async (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
-  const image = mongodb.getDb().db('cse341-project2').collection('image').find();
-  image.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(lists);
-  });
 };
 
 const getPlant = async (req, res) => {
